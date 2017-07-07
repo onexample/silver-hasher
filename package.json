@@ -1,0 +1,32 @@
+{
+    "name": "silver-hasher",
+    "version": "0.0.1",
+    "description": "Greatest Functions and Approaches",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts",
+        "build": "./node_modules/.bin/webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/onexample/silver-hasher.git"
+    },
+    "keywords": [
+        "JavaScript"
+    ],
+    "author": "Vladyslav",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/onexample/silver-hasher/issues"
+    },
+    "homepage": "https://github.com/onexample/silver-hasher#readme",
+    "devDependencies": {
+        "@types/mocha": "^2.2.41",
+        "@types/node": "~6.0.60",
+        "mocha": "^3.4.2",
+        "shx": "^0.2.2",
+        "ts-loader": "^2.2.2",
+        "ts-node": "^3.2.0",
+        "typescript": "~2.2.2",
+        "webpack": "^3.1.0"
+    }
+}
