@@ -14,6 +14,11 @@ describe('Function: isSorted(arr)', () =>
         assert.equal(true, isSorted([]));
     });
 
+    it('should return true for sorted array in decreasing order [9, 4, 3, -1, -Infinity]', () =>
+    {
+        assert.equal(true, isSorted([9, 4, 3, -1, -Infinity]));
+    });
+
     it('should return false for unsorted array [3, 9, -3, 10]', () =>
     {
         assert.equal(false, isSorted([3, 9, -3, 10]));
