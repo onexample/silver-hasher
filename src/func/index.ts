@@ -5,3 +5,4 @@ export * from './isSorted';
 export * from './filter';
 export * from './reduce';
 export * from './reverse';
+export * from './indexOf';
