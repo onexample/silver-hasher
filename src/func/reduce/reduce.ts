@@ -1,4 +1,4 @@
-export function reduce (arr, iter, acc?): Array<any> {
+export function reduce (arr, iter, acc?): any {
 
     let i = -1;
 
