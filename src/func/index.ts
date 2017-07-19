@@ -7,3 +7,4 @@ export * from './reduce';
 export * from './reverse';
 export * from './indexOf';
 export * from './isPalindrome';
+export * from './missing';
