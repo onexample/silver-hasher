@@ -1,11 +1,28 @@
-export function debounce (fn, delay: number)  {
+export function debounce (fn, delay: number, immediate?: boolean)  {
 
     //Shared timeout between each closure call;
     let timerId;
 
     return function () {
-        let context = this, args = arguments;
+
+        const context = this, args = arguments;
+
+        const later = () => {
+
+            timerId = null;
+
+            if ( !immediate ) {
+                fn.apply(context, args);
+            }
+        };
+
         clearTimeout(timerId);
-        timerId = setTimeout(() => fn.apply(context, args), delay);
+
+        timerId = setTimeout(later, delay);
+
+        if (immediate && !timerId) {
+            fn.apply(context, args);
+        }
+
     }
 }
