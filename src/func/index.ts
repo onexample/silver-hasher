@@ -9,3 +9,4 @@ export * from './indexOf';
 export * from './isPalindrome';
 export * from './missing';
 export * from './isBalanced';
+export * from './debounce';
