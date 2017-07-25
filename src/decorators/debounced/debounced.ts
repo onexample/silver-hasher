@@ -3,24 +3,25 @@ import { debounce } from '../../func'
 /**
  * Decorator for Class methods, used debounce()
  *
+ * Example:
+ *
+ *      class ExampleApp {
+ *
+ *          constructor () {
+ *              document.addEventListener('mousemove', this.example)
+ *          }
+ *
+ *          @Debounced(500)
+ *          public example() {
+ *              console.log('hello')
+ *          }
+ *      }
+ *
+ *
  * @param {number} delay
  * @returns {(target, propertyKey: string, descriptor: PropertyDescriptor) => {configurable: boolean; enumerable: boolean; get: (() => any)}}
  * @constructor
- *
- *
- *  Example:
- *
- *  class ExampleApp {
- *
- *      constructor () {
- *          document.addEventListener('mousemove', this.example)
- *      }
- *
- *      @Debounced(500)
- *      public example() {
- *          console.log('hello')
- *      }
- *  }
+
  *
  */
 export function Debounced (delay: number) {
