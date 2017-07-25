@@ -1,0 +1,44 @@
+import { debounce } from '../../func'
+
+/**
+ * Decorator for Class methods, used debounce()
+ *
+ * @param {number} delay
+ * @returns {(target, propertyKey: string, descriptor: PropertyDescriptor) => {configurable: boolean; enumerable: boolean; get: (() => any)}}
+ * @constructor
+ *
+ *
+ *  Example:
+ *
+ *  class ExampleApp {
+ *
+ *      constructor () {
+ *          document.addEventListener('mousemove', this.example)
+ *      }
+ *
+ *      @Debounced(500)
+ *      public example() {
+ *          console.log('hello')
+ *      }
+ *  }
+ *
+ */
+export function Debounced (delay: number) {
+
+    return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+
+        return {
+            configurable: descriptor.configurable,
+            enumerable: descriptor.enumerable,
+            get: function () {
+                Object.defineProperty(this, propertyKey, {
+                    configurable: descriptor.configurable,
+                    enumerable: descriptor.enumerable,
+                    value: debounce(descriptor.value, delay)
+                });
+                return this[propertyKey]
+            }
+        }
+    }
+
+}
