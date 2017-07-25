@@ -4,8 +4,7 @@
     "description": "Greatest Functions and Approaches",
     "scripts": {
         "test": "./node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts",
-        "build": "./node_modules/.bin/webpack",
-        "docs": "./node_modules/.bin/typedoc --out dist/docs"
+        "build": "./node_modules/.bin/webpack"
     },
     "repository": {
         "type": "git",
@@ -27,7 +26,6 @@
         "mocha": "^3.4.2",
         "ts-loader": "^2.2.2",
         "ts-node": "^3.2.0",
-        "typedoc": "^0.7.1",
         "typescript": "~2.2.2",
         "webpack": "^3.1.0"
     }
