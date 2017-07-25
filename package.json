@@ -3,7 +3,8 @@
     "version": "0.0.1",
     "description": "Greatest Functions and Approaches",
     "scripts": {
-        "test": "./node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts",
+        "test": "./node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts  --reporter spec",
+        "test:coverage": "./node_modules/.bin/ts-node node_modules/istanbul/lib/cli.js cover -e .ts  -x \"*.d.ts\" -x \"*.spec.ts\" _mocha -- --compilers ts:ts-node/register -R spec src/**/*.spec.ts",
         "build": "./node_modules/.bin/webpack"
     },
     "repository": {
@@ -23,6 +24,8 @@
         "@types/mocha": "^2.2.41",
         "@types/node": "~6.0.60",
         "@types/sinon": "^2.2.41",
+        "coveralls": "^2.13.1",
+        "istanbul": "^0.4.5",
         "mocha": "^3.4.2",
         "sinon": "^2.3.8",
         "ts-loader": "^2.2.2",
