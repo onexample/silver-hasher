@@ -24,6 +24,7 @@
         "@types/node": "~6.0.60",
         "@types/sinon": "^2.2.41",
         "mocha": "^3.4.2",
+        "sinon": "^2.3.8",
         "ts-loader": "^2.2.2",
         "ts-node": "^3.2.0",
         "typescript": "~2.2.2",
