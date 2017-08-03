@@ -20,3 +20,4 @@
 /npm-debug.log
 /example/
 /coverage/
+/.nyc_output/
