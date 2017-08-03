@@ -4,7 +4,7 @@
     "description": "Greatest Functions and Approaches",
     "scripts": {
         "test": "./node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts  --reporter spec",
-        "coverage": "./node_modules/.bin/nyc --reporter=text --reporter=text-lcov npm test",
+        "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
         "build": "./node_modules/.bin/webpack"
     },
     "nyc": {
