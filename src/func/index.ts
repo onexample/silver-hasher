@@ -11,3 +11,4 @@ export * from './missing';
 export * from './isBalanced';
 export * from './debounce';
 export * from './uniq';
+export * from './intersection';
