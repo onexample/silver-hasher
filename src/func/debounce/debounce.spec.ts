@@ -8,9 +8,9 @@ describe('Function: debounce (fn, delay) ', () =>
 
         let timer = sinon.useFakeTimers();
 
-        let spy = sinon.spy(console, 'log');
+        let spy = sinon.spy();
 
-        const debounced =  debounce(()=>console.log(''), 100);
+        const debounced =  debounce(()=>spy(), 100);
 
         debounced();
         debounced();
