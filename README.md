@@ -3,8 +3,32 @@
 
 # silver-hasher
 
+Implementation of most used functions and data structures.
 
-Implementation of most used functions and data structures
+
+## Getting Started 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+Make sure you have installed NodeJS v >= 7.3.0.
+
+
+## Installing
+ 
+To install run:
+
+    npm install silver-hasher --save 
+
+
+## Running the tests 
+
+    npm run test
+    
+## Build 
+
+    npm run build    
+
 
 # Functions 
 
