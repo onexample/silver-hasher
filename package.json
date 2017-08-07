@@ -1,6 +1,6 @@
 {
     "name": "silver-hasher",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Greatest Functions and Approaches",
     "scripts": {
         "test": "mocha -r ts-node/register src/**/*.spec.ts  --reporter spec",
