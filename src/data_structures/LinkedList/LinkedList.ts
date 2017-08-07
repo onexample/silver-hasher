@@ -1,5 +1,9 @@
 import { Node } from './Node';
 
+/**
+ * A linear collection of data elements
+ *
+ */
 export class LinkedList {
 
     private head: Node;
