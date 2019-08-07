@@ -65,6 +65,7 @@
         "source-map-support": "^0.4.15",
         "ts-loader": "^2.3.2",
         "ts-node": "^3.3.0",
+        "tsconfig-paths": "^3.8.0",
         "typedoc": "^0.7.1",
         "webpack": "^3.4.1"
     },
