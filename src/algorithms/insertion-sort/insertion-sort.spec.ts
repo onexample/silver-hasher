@@ -1,7 +1,7 @@
 import * as assert from 'assert';
 import { insertionSort } from './insertion-sort';
 
-describe('Function: insertionSort(arr)', () => {
+describe('Algorithm: insertionSort(arr)', () => {
 
     it('should sort array in ascending order', () => {
         const payload = [1, 4, 2, 444, 22, 192];

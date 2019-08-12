@@ -1,7 +1,7 @@
 import * as assert from 'assert';
 import { quickSort } from './quick-sort';
 
-describe('Function: quickSort(arr)', () => {
+describe('Algorithm: quickSort(arr)', () => {
 
     it('should sort array in asscending order', () => {
         const payload = [1, 4, 5, 0, 3];
