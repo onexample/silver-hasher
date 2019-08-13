@@ -1,7 +1,7 @@
 import * as assert from 'assert';
 import { LinkedList } from './LinkedList';
 
-describe('Class: LinkedList', () =>
+describe('DataSctructure: LinkedList', () =>
 {
 
     it('should add item to the List', () => {
