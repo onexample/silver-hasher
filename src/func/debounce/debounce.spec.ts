@@ -1,14 +1,13 @@
 import * as assert from 'assert';
-import * as sinon from 'sinon';
 import { debounce } from './debounce';
 
 describe('Function: debounce (fn, delay) ', () =>
 {
     it('should be only one call in 100ms', ()=>{
 
-        let timer = sinon.useFakeTimers();
+        let spy = jest.fn();
 
-        let spy = sinon.spy();
+        let timer = jest.useFakeTimers();
 
         const debounced =  debounce(()=>spy(), 100);
 
@@ -16,9 +15,10 @@ describe('Function: debounce (fn, delay) ', () =>
         debounced();
         debounced();
 
-        timer.tick(200);
+        timer.runAllTimers()
 
-        assert(spy.calledOnce);
+
+        assert.equal(spy.mock.calls.length, 1);
 
     })
 

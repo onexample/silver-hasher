@@ -9,6 +9,8 @@
 *.launch
 .settings/
 *.sublime-workspace
+.node_modules
+.dist
 
 # compiled output
 /tmp
