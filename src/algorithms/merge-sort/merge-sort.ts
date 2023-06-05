@@ -1,6 +1,4 @@
-
-export const mergeSort = (arr: number[]) => {
-
+export const mergeSort = (arr: number[]): number[] => {
     const len = arr.length;
 
     if (len < 2) {
@@ -15,18 +13,18 @@ export const mergeSort = (arr: number[]) => {
         let li = 0;
         let ri = 0;
         let resultArr = [];
-        
+
         while (li < leftBucket.length && ri < rightBucket.length) {
             if (leftBucket[li] < rightBucket[ri]) {
                 resultArr.push(leftBucket[li]);
                 li += 1;
             } else {
                 resultArr.push(rightBucket[ri]);
-                ri += 1; 
+                ri += 1;
             }
         }
-        return [ ...resultArr, ...leftBucket.slice(li), ...rightBucket.slice(ri)];
-    }
+        return [...resultArr, ...leftBucket.slice(li), ...rightBucket.slice(ri)];
+    };
 
     return merge(mergeSort(left), mergeSort(right));
-}
+};

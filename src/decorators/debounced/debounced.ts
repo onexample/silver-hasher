@@ -1,4 +1,4 @@
-import { debounce } from '../../func'
+import { debounce } from "../../func";
 
 /**
  * Decorator for Class methods, used debounce()
@@ -24,10 +24,8 @@ import { debounce } from '../../func'
 
  *
  */
-export function Debounced (delay: number) {
-
-    return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
-
+export function Debounced<T>(delay: number) {
+    return function (target: T, propertyKey: string, descriptor: PropertyDescriptor) {
         return {
             configurable: descriptor.configurable,
             enumerable: descriptor.enumerable,
@@ -35,11 +33,10 @@ export function Debounced (delay: number) {
                 Object.defineProperty(this, propertyKey, {
                     configurable: descriptor.configurable,
                     enumerable: descriptor.enumerable,
-                    value: debounce(descriptor.value, delay)
+                    value: debounce(descriptor.value, delay),
                 });
-                return this[propertyKey]
-            }
-        }
-    }
-
+                return this[propertyKey];
+            },
+        };
+    };
 }

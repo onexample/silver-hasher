@@ -1,24 +1,13 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "module": "commonjs",
-        "target": "es2015",
-        "noImplicitAny": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "typeRoots": [
-            "node_modules/@types"
-        ]
+        "outDir": "./dist",
+        "module": "CommonJS",
+        "target": "ES2022",
+        "strict": false,
     },
-    "compileOnSave": false,
-    "buildOnSave": false,
-    "files": [
-        "./src/index.ts"
-    ],
     "exclude": [
         "node_modules",
-        "**/*.spec.ts"
+        "**/*.spec.ts",
+        "**/*.test.ts"
     ]
 }
