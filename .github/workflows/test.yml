@@ -1,4 +1,4 @@
-  name: running tests
+  name: running ci checks
   on:
     push:
       branches:
@@ -16,7 +16,11 @@
           uses: actions/setup-node@v1
           with:
             node-version: '18.x'
-        - name: npm ci
+        - name: install dependencies
           run: npm ci
-        - name: npm test
-          run: npm test
+        - name: running linter
+          run: npm run lint
+        - name: typechecking
+          run: npm run typecheck
+        - name: tests
+          run: npm run test
