@@ -1,11 +1,9 @@
   name: running ci checks
   on:
     push:
-      branches:
-        - main
+      branches: ["main"]
     pull_request:
-      branches:
-        - main
+      branches: ["main"]
   jobs:
     checks:
       runs-on: ubuntu-latest
