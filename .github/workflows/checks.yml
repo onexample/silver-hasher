@@ -14,18 +14,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+      - uses: actions/setup-node@v3
       - run: npm ci
+        name: Install Dependencies
       - run: npm run lint
+        name: Linter...
       - run: npm run typecheck
+        name: Typecheck...
       - run: npm test
+        name: Running tests
