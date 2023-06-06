@@ -1,6 +1,6 @@
 module.exports = {
     collectCoverage: true,
-    coverageDirectory: "./coverage",
+    coverageDirectory: './coverage',
     coverageThreshold: {
         global: {
             branches: 80,
@@ -9,8 +9,8 @@ module.exports = {
             statements: 80,
         },
     },
-    roots: ["<rootDir>/src"],
+    roots: ['<rootDir>/src'],
     transform: {
-        "^.+\\.(ts|js)x?$": "babel-jest",
+        '^.+\\.(ts|js)x?$': 'babel-jest',
     },
 };

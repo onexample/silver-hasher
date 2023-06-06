@@ -13,8 +13,7 @@
  * @returns {Array<any>}
  */
 
-export const intersection = (arr1: Array<any>, arr2: Array<any> ): Array<any> => {
-    const s = new Set(arr2);
-    return arr1.filter(x => s.has(x))
+export const intersection = <T>(arr1: Array<T>, arr2: Array<T>): Array<T> => {
+    const s = new Set<T>(arr2);
+    return arr1.filter((x) => s.has(x));
 };
-

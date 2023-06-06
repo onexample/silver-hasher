@@ -1,6 +1,4 @@
-
 export class Node {
-
     public data: any;
     public next: Node;
 
@@ -8,5 +6,4 @@ export class Node {
         this.data = data;
         this.next = null;
     }
-
 }

@@ -1,14 +1,13 @@
 export const fib = (n: number): number => {
-
-    if(n===0) {
-       return n;
+    if (n === 0) {
+        return n;
     }
 
     let a = 1,
         b = 1;
 
     for (let i = 3; i <= n; i++) {
-        let c = a + b;
+        const c = a + b;
         a = b;
         b = c;
     }

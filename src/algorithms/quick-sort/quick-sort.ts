@@ -4,8 +4,7 @@ export const quickSort = (arr: number[]) => {
         return arr;
     }
     const pivot = arr[Math.floor(Math.random() * len)];
-    const left = arr.filter(el => el < pivot);
-    const right = arr.filter(el => el > pivot);
+    const left = arr.filter((el) => el < pivot);
+    const right = arr.filter((el) => el > pivot);
     return [...quickSort(left), pivot, ...quickSort(right)];
-
-}
+};

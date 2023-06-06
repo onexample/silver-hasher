@@ -5,7 +5,6 @@ import { Node } from './Node';
  *
  */
 export class LinkedList {
-
     private head: Node;
     private length: number;
 
@@ -17,15 +16,14 @@ export class LinkedList {
     add(data: any) {
         const nodeToAdd = new Node(data);
 
-        if(this.head===null) {
+        if (this.head === null) {
             this.head = nodeToAdd;
-        }
-        else {
+        } else {
             let nodeToCheck = this.head;
-            while(nodeToCheck.next) {
-                nodeToCheck =  nodeToCheck.next;
+            while (nodeToCheck.next) {
+                nodeToCheck = nodeToCheck.next;
             }
-            nodeToCheck.next=nodeToAdd;
+            nodeToCheck.next = nodeToAdd;
         }
 
         this.length++;
@@ -36,14 +34,13 @@ export class LinkedList {
     }
 
     remove(position: number) {
-
-        let currentNode = this.head,
-            length = this.length,
-            count = 0,
-            message = 'Failure: non-existent node in this list.',
-            beforeNodeToDelete = null,
-            nodeToDelete = null,
-            deletedNode = null;
+        let currentNode = this.head;
+        const length = this.length;
+        let count = 0;
+        const message = 'Failure: non-existent node in this list.';
+        let beforeNodeToDelete = null;
+        let nodeToDelete = null;
+        let deletedNode = null;
 
         // in case of invalid position passed
         if (position < 0 || position > length) {
@@ -72,9 +69,5 @@ export class LinkedList {
         this.length--;
 
         return deletedNode;
-
     }
-
-
 }
-

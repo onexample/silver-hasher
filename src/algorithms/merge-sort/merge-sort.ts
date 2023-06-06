@@ -12,7 +12,7 @@ export const mergeSort = (arr: number[]): number[] => {
     const merge = (leftBucket: number[], rightBucket: number[]) => {
         let li = 0;
         let ri = 0;
-        let resultArr = [];
+        const resultArr = [];
 
         while (li < leftBucket.length && ri < rightBucket.length) {
             if (leftBucket[li] < rightBucket[ri]) {

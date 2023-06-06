@@ -1,5 +1,4 @@
 export const selectionSort = (arr: number[]) => {
-
     const len = arr.length;
     let temp: number;
 
@@ -7,8 +6,7 @@ export const selectionSort = (arr: number[]) => {
         let mi = i;
 
         for (let j = i + 1; j < len; j++) {
-            if (arr[j] < arr[mi])
-                mi = j;
+            if (arr[j] < arr[mi]) mi = j;
         }
 
         temp = arr[i];
@@ -17,4 +15,4 @@ export const selectionSort = (arr: number[]) => {
     }
 
     return arr;
-}
+};

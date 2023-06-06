@@ -1,1 +1,1 @@
-export const uniq = (arr: Array<any>): Array<any> => [...new Set(arr)];
+export const uniq = <T>(arr: Array<T>): Array<T> => [...new Set<T>(arr)];

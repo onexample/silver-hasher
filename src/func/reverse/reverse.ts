@@ -1,11 +1,10 @@
 export const reverse = (str: string): string => {
-
-    let result: string = '';
+    let result = '';
 
     let len: number = str.length;
 
-    while ( len > 0 ) {
-        result += str.substring(len-1, len);
+    while (len > 0) {
+        result += str.substring(len - 1, len);
         len--;
     }
 
@@ -16,6 +15,4 @@ export const reverse = (str: string): string => {
      *
      */
     return result;
-
 };
-

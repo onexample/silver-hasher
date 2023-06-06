@@ -1,25 +1,20 @@
 import * as assert from 'assert';
 import { debounce } from './debounce';
 
-describe('Function: debounce (fn, delay) ', () =>
-{
-    it('should be only one call in 100ms', ()=>{
+describe('Function: debounce (fn, delay) ', () => {
+    it('should be only one call in 100ms', () => {
+        const spy = jest.fn();
 
-        let spy = jest.fn();
+        const timer = jest.useFakeTimers();
 
-        let timer = jest.useFakeTimers();
-
-        const debounced =  debounce(()=>spy(), 100);
+        const debounced = debounce(() => spy(), 100);
 
         debounced();
         debounced();
         debounced();
 
-        timer.runAllTimers()
-
+        timer.runAllTimers();
 
         assert.equal(spy.mock.calls.length, 1);
-
-    })
-
+    });
 });

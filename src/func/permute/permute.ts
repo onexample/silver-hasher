@@ -1,25 +1,21 @@
 export const permute = (str: string): Array<string> => {
-
     if (str.length === 0) {
         return [];
     }
 
     if (str.length === 1) {
-        return [str]
+        return [str];
     }
 
-    let permutations = [];
+    const permutations = [];
 
-    str.split('').forEach((char, index)=>{
+    str.split('').forEach((char, index) => {
+        const remainingString = str.slice(0, index) + str.slice(index + 1, str.length);
 
-        let remainingString = str.slice(0,index) + str.slice(index+1,str.length);
-
-        for (let subPermutation of permute(remainingString)) {
-            permutations.push(char + subPermutation)
+        for (const subPermutation of permute(remainingString)) {
+            permutations.push(char + subPermutation);
         }
-
     });
 
     return permutations;
 };
-

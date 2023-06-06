@@ -1,15 +1,14 @@
-export const filter = (arr: Array<any>, fn:(v:any, i: number, a: Array<any>) => boolean): Array<any> => {
+export const filter = <T>(arr: Array<T>, fn: (v: T, i: number, a: Array<T>) => boolean): Array<T> => {
+    let i = -1;
+    let ri = 0;
+    const res = [];
 
-    let i = -1,
-        ri = 0,
-        res = [];
-
-    const len = !arr ? 0: arr.length;
+    const len = !arr ? 0 : arr.length;
 
     while (++i < len) {
-        let val = arr[i];
-        if(fn(val, i, arr)) {
-            res[ri++]=val;
+        const val = arr[i];
+        if (fn(val, i, arr)) {
+            res[ri++] = val;
         }
     }
 

@@ -1,9 +1,7 @@
 import * as assert from 'assert';
 import { isPalindrome } from './isPalindrome';
 
-describe('Function: isPalindrome(str)', () =>
-{
-
+describe('Function: isPalindrome(str)', () => {
     it('should return true  for empty string', () => {
         assert.equal(true, isPalindrome(''));
     });
@@ -19,5 +17,4 @@ describe('Function: isPalindrome(str)', () =>
     it('should return true  for str = A man a plan a canal Panama', () => {
         assert.equal(true, isPalindrome('A man a plan a canal Panama'));
     });
-
 });

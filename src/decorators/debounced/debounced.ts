@@ -1,4 +1,4 @@
-import { debounce } from "../../func";
+import { debounce } from '../../func';
 
 /**
  * Decorator for Class methods, used debounce()

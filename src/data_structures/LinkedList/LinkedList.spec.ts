@@ -1,22 +1,18 @@
 import * as assert from 'assert';
 import { LinkedList } from './LinkedList';
 
-describe('DataSctructure: LinkedList', () =>
-{
-
+describe('DataSctructure: LinkedList', () => {
     it('should add item to the List', () => {
-
-        let list = new LinkedList();
+        const list = new LinkedList();
         list.add(1);
         list.add(2);
         list.add(3);
 
-        assert.equal(3, list.size())
-
+        assert.equal(3, list.size());
     });
 
     it('should remove item from List', () => {
-        let list = new LinkedList();
+        const list = new LinkedList();
         list.add(1);
         list.add(4);
         list.add(6);
@@ -27,14 +23,13 @@ describe('DataSctructure: LinkedList', () =>
         list.remove(2);
         list.remove(3);
 
-        assert.equal(3, list.size())
+        assert.equal(3, list.size());
     });
 
     it('should throw exception for invalid position', () => {
-        let list = new LinkedList();
+        const list = new LinkedList();
         list.add(1);
 
         assert.throws(() => list.remove(-1), Error);
     });
-
 });
